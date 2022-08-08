@@ -29,7 +29,8 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-    - task: AzureWebApp@1
+
+- task: AzureWebApp@1
       inputs:
         azureSubscription: 'Bora MSDN $150 monthly credit (88ac7ef4-9237-4b2d-98b8-a8329f508c79)'
         appType: 'webApp'
