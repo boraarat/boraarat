@@ -1,68 +1,50 @@
----
-page_type: sample
-description: "Deploy dotnet application using GitHub Actions"
-products:
-- GitHub Actions
-- Azure App service
-languages:
-- dotnet
+## Hi there 👋
+
+Welcome to my GitHub profile! I'm **Bora Arat**, Director of Microsoft Technology Solutions at **Logosoft Bilişim Teknolojileri**, driving enterprise cloud transformation and AI-powered business solutions. ☁️🚀
+
 ---
 
-# Sample ASP.NET Core application for GitHub Actions
+### About Me
 
-For all samples to set up GitHub workflows, see [Create your first workflow](https://github.com/Azure/actions-workflow-samples
+- 🔭 I'm currently leading **Microsoft technology strategy and solutions** at [Logosoft](https://logosoft.com.tr), helping organizations modernize their infrastructure with Azure cloud services and AI.
+- 🌱 I'm passionate about building intelligent automation systems using **Azure OpenAI**, **Microsoft Graph API**, and modern web technologies.
+- 💡 I specialize in turning complex business challenges into elegant, scalable cloud solutions.
+- 👯 I'm open to collaborating on projects involving **cloud architecture**, **AI integrations**, and **DevOps automation**.
+- 📝 I regularly share insights on my blog: [boraarat.com](https://boraarat.com)
+- 📫 How to reach me:
+  - [LinkedIn](https://www.linkedin.com/in/boraarat/)
+  - [Website](https://boraarat.com)
 
-# Steps to create an End-to-End CI/CD Workflow
+---
 
-## Pre-requisites
-* Create a new Web App in Azure Portal with runtime stack as .NET and OS as Windows
-* Copy Publish Profile Settings of the app
+### My Expertise
 
-### Create an ASP.NET App Service in Azure
+| Area | Technologies |
+|------|-------------|
+| ☁️ **Cloud** | Microsoft Azure (App Service, Functions, SQL, Cognitive Services, OpenAI, AKS) |
+| 🤖 **AI & Automation** | Azure OpenAI, GPT Integrations, Microsoft Graph API, Power Platform |
+| 🛠️ **Backend** | TypeScript, Node.js, Express, Prisma, .NET |
+| 🐳 **DevOps** | Docker, Kubernetes, GitHub Actions, Terraform, CI/CD |
+| 💻 **Scripting** | PowerShell, Azure Cloud Shell |
+| 📊 **Data & BI** | Azure SQL, Power BI, Data Pipelines |
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F101-webapp-windows-ASPNET%2Fazuredeploy.json" target="_blank">
-    <img src="https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.png"/>
-</a>
-<a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2F101-webapp-windows-ASPNET%2Fazuredeploy.json" target="_blank">
-    <img src="https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.png"/>
-</a>
+---
 
-This template deploys a web app with ASP.NET support. The web app with ASP.NET is an app service that allows you to deploy your ASP.NET website. This will deploy a free tier Windows App Service Plan where you will host your App Service.
+### 🚀 Featured Projects
 
-If you are new to Azure App Service, see:
+| Project | Description |
+|---------|------------|
+| [**Web-Based-Sales-Pipeline**](https://github.com/boraarat/Web-Based-Sales-Pipeline) | AI-powered email analysis system that automatically converts sales emails into pipeline opportunities using Azure OpenAI & Microsoft Graph |
+| [**Azure-AI-Video-Translate**](https://github.com/boraarat/Azure-AI-Video-Translate) | Multi-language video translation web app powered by Azure AI Speech — supports 13 languages with AI-generated voiceover |
+| [**Logosoft-Destek-AI-Project**](https://github.com/boraarat/Logosoft-Destek-AI-Project) | AI-assisted customer support platform for enterprise service management |
+| [**Azure-Powershell**](https://github.com/boraarat/Azure-Powershell) | Collection of PowerShell scripts for Azure infrastructure management and automation |
 
-- [Azure App Service](https://azure.microsoft.com/services/app-service/web/)
-- [Template reference](https://docs.microsoft.com/azure/templates/microsoft.web/allversions)
-- [Quickstart templates](https://azure.microsoft.com/resources/templates/?resourceType=Microsoft.Compute&pageNumber=1&sort=Popular&term=web+apps)
+---
 
-## Configure secrets in the GH repo:
-* In the GH repo with Application code, [Define a new secret](https://github.com/Azure/actions-workflow-samples/blob/master/assets/create-secrets-for-GitHub-workflows.md) under repository by navigating to **settings** > **secrets** > **Add a new secret** 
-* Paste the contents for the downloaded publish profile file into the secret's value field
-* Now in the workflow file in your branch: `.github/workflows/workflow.yml` replace the secret for the input `publish-profile:` of the deploy Azure WebApp action
+### 📊 GitHub Stats
 
-## test your workflow
-* Commit a change in the app code. 
-* You should see a new GitHub Action initiated in **Actions** tab.
-* At the end of the execution, navigate to the App URL to visualise the change introduced.
+![Bora's GitHub Stats](https://github-readme-stats.vercel.app/api?username=boraarat&show_icons=true&theme=default&hide_border=true&count_private=true)
 
-## Workflow YAML explained
+---
 
-* [Checkout](https://github.com/actions/checkout) Checks out your Git repository content into Github Actions agent.
-* Environment setup using [Setup MSBuild](https://github.com/microsoft/setup-msbuild) - Sets up a ms-build environment by optionally downloading and caching a version of dotnet by SDK version and adding to PATH .
-* DotNet Build & Publish
-* Deploy to App service using azure/webapps-deploy@v1 action which authenticates using [Azure Web App Publish Profile](https://github.com/projectkudu/kudu/wiki/Deployment-credentials#site-credentials-aka-publish-profile-credentials)
-which we configured using the secret set up at the repo level
-
-## Contributing
-
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
-
-When you submit a pull request, a CLA bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+Thanks for visiting! Feel free to explore my projects and reach out if you'd like to collaborate. Let's build something amazing together! 🚀
